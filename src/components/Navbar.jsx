@@ -1,68 +1,64 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { FaTimes, FaDownload, FaBars, FaGithub, FaLinkedin } from "react-icons/fa";
 import "../index.css";
-import "../responsiveness.css";
 
-function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const sidebarRef = useRef(null);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
     };
 
-    const closeMenu = () => {
-        setIsMenuOpen(false);
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
+  }, [isOpen]);
 
-    useEffect(() => {
-        const handleOutsideClick = (event) => {
-            if (!event.target.closest(".navbar")) {
-                closeMenu();
-            }
-        };
-
-        const handleScroll = () => {
-            closeMenu();
-        };
-
-        if (isMenuOpen) {
-            document.addEventListener("click", handleOutsideClick);
-            window.addEventListener("scroll", handleScroll);
-        }
-
-        return () => {
-            document.removeEventListener("click", handleOutsideClick);
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [isMenuOpen]);
-
-    return (
-        <nav className="navbar">
-            <div className="navbar-logo">My Logo</div>
-            <div className="hamburger" onClick={toggleMenu}>
-                {isMenuOpen ? (
-                    <span className="cancel-icon">✖</span>
-                ) : (
-                    <>
-                        <span className="bar"></span>
-                        <span className="bar"></span>
-                        <span className="bar"></span>
-                    </>
-                )}
+  return (
+    <nav className="navbar">
+      <div className="logo">My Logo</div>
+        <div className="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#stack">Tech Stack</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <div className="fa">
+                <FaDownload />
+                <FaGithub />   
+                <FaLinkedin />
             </div>
-            <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
-                <li className="navbar-link">Home</li>
-                <li className="navbar-link">About</li>
-                <li className="navbar-link">Tech Stack</li>
-                <li className="navbar-link">Projects</li>
-                <li className="navbar-link">Contact</li>
-            </ul>
-            <div className="navbar-buttons">
-                <div className="navbar-button">Resume</div>
-                <div className="navbar-button">LinkedIn</div>
-                <div className="navbar-button">GitHub</div>
-            </div>
-        </nav>
-    );
-}
+        </div>
+      <div className="hamburger" onClick={toggleSidebar}>
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      <div className={`sidebar ${isOpen ? "active" : ""}`} ref={sidebarRef}>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Tech Stack</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+            <FaDownload />
+            <FaGithub />
+            <FaLinkedin />
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;

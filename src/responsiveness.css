@@ -1,26 +1,19 @@
-@media (max-width: 490px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: white;
-        width: 250px;
-        text-align: right;
-        padding: 1rem;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+@media (max-width: 768px) {
+    .nav-links {
+      display: none;
     }
-
-    .navbar-links.open {
-        display: flex;
-    }
-
+  
     .hamburger {
-        display: flex;
+      display: block;
     }
 
-    .navbar-buttons {
-        display: none;
+    .hero {
+        display: flex;
+        flex-direction: column;
     }
-}
+
+    .stack-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }

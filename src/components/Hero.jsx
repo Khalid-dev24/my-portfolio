@@ -1,4 +1,5 @@
 import React from "react";
+import { FaDownload } from "react-icons/fa";
 import "../index.css";
 import HeroImg from "../assets/khalid.jpeg";
 
@@ -8,9 +9,9 @@ function Hero () {
       <div className="hero-content">
         <h1 className="hero-title">Hi 👋,</h1>
         <p className="hero-description">
-        My name is Khalid Misbaudeen. <br />Software Developer.
+        My name is <br /><span>Khalid Misbaudeen.</span> <br />A Software Developer.
         </p>
-        <button className="hero-button">Download Resume</button>
+        <button className="hero-button">Download Resume <FaDownload /></button>
       </div>
 
       <div className="hero-image">
