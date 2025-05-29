@@ -5,15 +5,81 @@
   
     .hamburger {
       display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .logo {
+       margin-left: -14rem;
+        margin-top: 1rem;
     }
 
     .hero {
         display: flex;
         flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        
     }
+
+    .hero-button {
+      margin-left: 3rem;
+      
+    }
+
+    .hero-content h1, .hero-content p {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .hero-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .work-experience, .edeucation {
+      display: none;
+    }
+
+    
 
     .stack-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 5rem;
+        gap: 2rem;
+    }
+
+    .stack-item {
+      font-size: 1rem;
+      margin-left: 0;
+    }
+
+    .footer-top {
+      border-bottom: none;
+    }
+
+    .footer-logo, .footer-contact, .footer-bottom {
+      display: none;
+    }
+
+    .footer-icons {
+     margin-left: 7rem;
+     gap: 2rem;
+    }
+
+    .scroll-to-top {
+      display: none;
     }
   }

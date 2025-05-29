@@ -45,9 +45,15 @@ const Footer = () => {
 
         
         <div className="footer-icons">
-          <a href="#"><FaDownload /></a>
-          <a href="#"><FaGithub /></a>
-          <a href="#"><FaLinkedin /></a>
+          <a href="https://drive.google.com/file/d/1CBtnRtyLr66NCXbu5dvw0YZ5uPPaTLBc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <FaDownload className="nav-icon" />
+          </a>
+          <a href="https://github.com/khalid-dev24" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="nav-icon"/>
+          </a>
+          <a href="https://linkedin.com/in/khalid-misbaudeen" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="nav-icon"/>
+          </a>
         </div>
       </div>
 
