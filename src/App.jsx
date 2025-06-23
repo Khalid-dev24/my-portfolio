@@ -6,6 +6,7 @@ import Stack from "./components/Stack";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Certificates from "./components/Certificates";
 
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <div className="spacer"></div>
       <Stack />
+      <Certificates />
       <Projects />
       <Contact />
       <Footer />

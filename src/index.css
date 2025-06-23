@@ -20,8 +20,14 @@
 }
   
 .logo {
-    font-weight: bold;
-    margin-left: -7rem;
+   
+    font-size: 28px;
+    font-weight: 800;
+    /* margin-left: -7rem;np */
+    background: linear-gradient(to right,#13B0F5, #E70FAA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
   
 .nav-links {
@@ -233,6 +239,59 @@
     list-style: none;
 }
 
+/* Certificates Styling */
+.certificates-section {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.certificates-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #42446E;
+}
+
+.certificates-section p {
+  font-size: 1rem;
+  color: #666666;
+  margin-bottom: 2rem;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.5rem;
+  justify-items: center;
+  margin: 0 5rem;
+}
+
+.certificate-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(19, 176, 245, 0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(19, 176, 245, 0.15);
+}
+
+.certificate-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
 
 /* Projects Style */
 
@@ -424,10 +483,18 @@ position: relative;
     padding: 1rem 1.5rem;
     border: none;
     border-radius: 30px;
-    background: #fff7f7;
+    background: #f3f6fd;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s ease;
+}
+
+.spacer {
+  border-bottom: 2px dashed #ccc;
+  margin: 4rem 0;
+  width: 85% ;
+  justify-self: center;
+  align-self: center;
 }
 
 
@@ -599,7 +666,124 @@ position: relative;
 
 
 
+/* Dark Mode Styles */
+.dark-mode {
+  background: #181824;
+  color: #f1f1f1;
+}
 
+.dark-mode .navbar,
+.dark-mode .sidebar {
+  background: #232336;
+  color: #f1f1f1;
+}
+
+.dark-mode .nav-links a,
+.dark-mode .sidebar a,
+.dark-mode .footer-nav a,
+.dark-mode .footer-credit,
+.dark-mode .footer-logo .logo-main,
+.dark-mode .footer-icons a  {
+  color: #f1f1f1;
+}
+
+.dark-mode .project-card {
+  background-color: #232336;
+  color: #f1f1f1;
+}
+
+.dark-mode .project-content h3,
+.dark-mode .project-content p,
+.dark-mode .tech-stack {
+  color: #f1f1f1;
+}
+
+.dark-mode .about-me h1,
+.dark-mode .projects-header h2,
+.dark-mode .stack-title,
+.dark-mode .contact-container h2,
+.dark-mode .certificates-section h2 {
+  color: #ffffff;
+}
+
+.dark-mode .about-me p,
+.dark-mode .stack-description,
+.dark-mode .projects-header p,
+.dark-mode .contact-container p,
+.dark-mode .certificates-section p {
+  color: #b0b3c6;
+}
+
+.dark-mode .contact-container {
+  background: #232336;
+  color: #f1f1f1;
+}
+
+.dark-mode .scroll-to-top {
+  background: linear-gradient(135deg, #232336, #181824);
+  color: #fff;
+}
+
+.dark-mode .project-links .btn-secondary {
+  color: #13B0F5;
+  border: 2px solid #13B0F5;
+}
+
+.dark-mode .project-links .btn-secondary:hover {
+  background: #13B0F5;
+  color: #fff;
+}
+
+.dark-mode-switch {
+  display: flex;
+  align-items: center;
+  background: #e0e0e0;
+  border-radius: 30px;
+  padding: 4px 8px;
+  cursor: pointer;
+  width: 70px;
+  position: relative;
+  transition: background 0.3s;
+  margin-left: 1rem;
+}
+
+.dark-mode-switch .icon {
+  font-size: 1.2rem;
+  transition: color 0.3s, opacity 0.3s;
+  color: #888;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.dark-mode-switch .icon.active {
+  color: #fbc02d; /* Sun color */
+  opacity: 1;
+}
+
+.dark-mode-switch .icon.moon.active {
+  color: #7c4dff; /* Moon color */
+}
+
+.dark-mode-switch .toggle-slider {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, #13B0F5, #E70FAA);
+  border-radius: 50%;
+  transition: left 0.3s, background 0.3s;
+  z-index: 1;
+}
+
+.dark-mode-switch .toggle-slider.light {
+  left: 6px;
+}
+
+.dark-mode-switch .toggle-slider.dark {
+  left: 32px;
+  background: linear-gradient(135deg, #232336, #181824);
+}
 
 
 
