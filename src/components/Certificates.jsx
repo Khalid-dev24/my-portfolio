@@ -3,9 +3,15 @@ import Frontend from "../assets/frontend.jpg";
 import Foundation from "../assets/foundation.jpeg";
 import Beyond from "../assets/beyond.jpeg";
 import Essentials from "../assets/essentials.jpeg";
+import GenerativeAI from "../assets/generative-ai.jpg";
 
 
 const certificates = [
+     {
+    image: GenerativeAI,
+    link: "https://www.linkedin.com/learning/certificates/080edac3ddd3fa9dbd47bcdbd0c291faed756c407e5e805140faf8fe0946e417",
+    alt: "AI Certificate"
+  },
     {
     image: Essentials,
     link: "https://www.linkedin.com/learning/certificates/5c9c41b3c54c7c2c3ca846bdc0969048f4ef70048ec36b8180a7fd4e4eb8c9cc",

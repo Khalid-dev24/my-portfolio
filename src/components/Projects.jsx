@@ -4,6 +4,7 @@ import "../responsiveness.css";
 import Imomotimi from "../assets/imomotimi.png";
 import Bigfix from "../assets/bigfix.png";
 import EnterpriseOne from "../assets/enterpriseone.png";
+import FastraSuite from "../assets/fastra-suite.png"
 
 const projectData = [
   {
@@ -21,6 +22,14 @@ const projectData = [
     liveLink: "https://bigfixtech.com",
     codeLink: "#",
     image: Bigfix,
+  },
+  {
+    title: "FastraSuite Website",
+    description: "FastraSuite is a sleek, responsive website I developed to showcase an enterprise management system. Built with React and VanillaCSS, it highlights key features, user roles, and platform benefits in a clean, modern layout.",
+    techStack: "React, HTML, CSS, JavaScript,",
+    liveLink: "https://fastrasuite.com",
+    codeLink: "#",
+    image: FastraSuite,
   },
   {
     title: "Imomotimi Dancing Competition Website",
