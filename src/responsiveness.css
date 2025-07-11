@@ -11,10 +11,9 @@
       font-size: 24px;
       cursor: pointer;
     }
-
-    .logo {
-       margin-left: -14rem;
-        margin-top: 1rem;
+     .logo {
+      margin-right: 10rem;
+      font-size: 25px;
     }
 
     .hero {
@@ -28,12 +27,12 @@
 
     .hero-button {
       margin-left: 3rem;
-      
+      font-size: 18px;
     }
 
     .hero-content h1, .hero-content p {
         text-align: center;
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .hero-img img {
@@ -48,11 +47,28 @@
         padding: 0 2rem;
     }
 
+    .about-me h1 {
+      font-size: 28px;
+      line-height: 0.7;
+    }
+
+    .about-me p {
+      font-size: 16px;
+    }
+
     .work-experience, .edeucation {
       display: none;
     }
 
-    
+    .stack-title {
+      font-size: 28px;
+    }
+
+    .stack-description {
+      font-size: 16px;
+      margin-bottom: 2rem;
+      padding: 0 2rem;
+    }
 
     .stack-list {
         display: grid;
@@ -62,9 +78,47 @@
     }
 
     .stack-item {
-      font-size: 1rem;
+      font-size: 0.5rem;
       margin-left: 0;
     }
+
+    .stack-item svg {
+      width: 60px;
+      height: 60px;
+    }
+
+    .certificates-section h2 {
+      font-size: 28px;
+      margin-top: -4rem;
+    }
+
+    .certificates-section p {
+      font-size: 16px;
+      padding: 0 2rem;
+    }
+
+    .certificates-grid {
+      margin: 0 2rem;
+      gap: 1rem;
+    }
+
+    .projects-header h2{
+      font-size: 28px;
+    }
+
+    .projects-header p {
+      font-size: 16px;
+      padding: 0 2rem;
+    }
+
+    .contact-container {
+      font-size: 28px;
+    }
+
+    .contact-container p {
+      font-size: 16px;
+    }
+
 
     .footer-top {
       border-bottom: none;

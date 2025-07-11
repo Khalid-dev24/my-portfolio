@@ -32,8 +32,7 @@ const Footer = () => {
         
         <div className="footer-logo">
           <h3 className="logo-main">
-            {"{024}"} <br />
-            <span>Khalid</span>
+            {"Khalid-dev"}
           </h3>
         </div>
 

@@ -70,7 +70,7 @@ const Navbar = () => {
 
 
 
-        <div className="fa">
+        {/* <div className="fa">
           <a href="https://drive.google.com/file/d/1CBtnRtyLr66NCXbu5dvw0YZ5uPPaTLBc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <FaDownload className="nav-icon" />
           </a>
@@ -80,7 +80,7 @@ const Navbar = () => {
           <a href="https://linkedin.com/in/khalid-misbaudeen" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="nav-icon"/>
           </a>
-        </div>
+        </div> */}
       </div>
       
       <div className="hamburger" onClick={toggleSidebar}>
