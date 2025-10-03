@@ -44,7 +44,7 @@ const Footer = () => {
 
         
         <div className="footer-icons">
-          <a href="https://drive.google.com/file/d/10VfebykITzEyk5AxLWQW6y7f0uf91HF7/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/file/d/1Ux6QiERZ3Pvo0VxTMQi5paunaQ1mrCXz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               <FaDownload className="nav-icon" />
           </a>
           <a href="https://github.com/khalid-dev24" target="_blank" rel="noopener noreferrer">
