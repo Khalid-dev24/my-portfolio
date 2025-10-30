@@ -11,7 +11,7 @@ function Hero () {
         <p className="hero-description">
         My name is <br /><span>Khalid Misbaudeen.</span> <br />A Software Developer.
         </p>
-        <button className="hero-button"><a href="https://drive.google.com/file/d/1Ux6QiERZ3Pvo0VxTMQi5paunaQ1mrCXz/view?usp=sharing" target="_blank">Download Resume <FaDownload /></a></button>
+        <button className="hero-button"><a href="https://drive.google.com/file/d/1N_jof1zdlCeJbgn287PkVEdDwegeEZpq/view?usp=sharing" target="_blank">Download Resume <FaDownload /></a></button>
       </div>
 
       <div className="hero-image">
