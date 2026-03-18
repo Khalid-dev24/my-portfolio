@@ -4,9 +4,17 @@ import Foundation from "../assets/foundation.jpeg";
 import Beyond from "../assets/beyond.jpeg";
 import Essentials from "../assets/essentials.jpeg";
 import GenerativeAI from "../assets/generative-ai.jpg";
+import DsaCertificate from "../assets/dsa-cert.png";
+
 
 
 const certificates = [
+    {
+    image: DsaCertificate,
+    // link: ,
+    alt: "DSA Certificate"
+  },
+
      {
     image: GenerativeAI,
     link: "https://www.linkedin.com/learning/certificates/080edac3ddd3fa9dbd47bcdbd0c291faed756c407e5e805140faf8fe0946e417",
