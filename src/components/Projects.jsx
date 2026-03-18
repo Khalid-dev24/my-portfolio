@@ -5,8 +5,17 @@ import Imomotimi from "../assets/imomotimi.png";
 import Bigfix from "../assets/bigfix.png";
 import EnterpriseOne from "../assets/enterpriseone.png";
 import FastraSuite from "../assets/fastra-suite.png"
+import Staffing from "../assets/25thandstaffing.png"
 
 const projectData = [
+  {
+    title: "25th & Staffing Website",
+    description: "Developed the 25th and Staffing website using React, creating a modern, responsive design with reusable components for a professional and seamless user experience across all devices.",
+    techStack: "React, CSS, Tailwind CSS, JavaScript, Typescript",
+    liveLink: "https://25thandstaffing.com", 
+    codeLink: "#", 
+    image: Staffing, 
+  },
   {
     title: "EnterpriseOne Website",
     description: "Developed a modern business website for Enterprise One with React. Implemented reusable components, responsive layout, and smooth scrolling to present services clearly and professionally across all devices.",
