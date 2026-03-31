@@ -78,14 +78,21 @@
     }
 
     .stack-item {
-      font-size: 0.5rem;
-      margin-left: 0;
+      margin: 1rem;
     }
 
     .stack-item svg {
-      width: 60px;
-      height: 60px;
+      width: 90px;
+      height: 90px;
     }
+
+    /* .stack-item svg, 
+    .stack-item .github, 
+    .stack-item .typescript, 
+    .stack-item .nextjs, 
+    .stack-item .nodejs {
+      margin: 1rem;
+    } */
 
     .certificates-section h2 {
       font-size: 28px;
