@@ -26,8 +26,9 @@
     }
 
     .hero-button {
-      margin-left: 3rem;
-      font-size: 18px;
+      margin-left: 2.5rem;
+      font-size: 14px;
+      
     }
 
     .hero-content h1, .hero-content p {
