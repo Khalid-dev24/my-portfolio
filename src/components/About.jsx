@@ -1,18 +1,23 @@
 import React from "react";
-import "../index.css";
 
-
-function About () {
+function About() {
     return (
         <section className="about" id="about">
-            <div className="about-me">
-                <h1>About Me</h1>
-                <p>I am Khalid Misbaudeen — a curious and creative software developer who builds meaningful, <br />user-centered digital experiences. I work across multiple stacks, love solving problems, and <br />thrive on growth. Beyond coding, I teach, mentor, and inspire others to keep learning and evolving.</p>
+            <div className="about-me" data-reveal>
+                <div className="about-meta">
+                    <p className="section-eyebrow">How I work</p>
+                    <p className="about-index">End-to-end / 01</p>
+                </div>
+                <div className="about-copy">
+                    <h2>Full-stack engineering.<br /><span>AI, where it adds value.</span></h2>
+                    <p>
+                        From frontend interfaces to backend systems and AI integrations, I build software around the people and workflows it serves. My experience spans different industries, so I adapt each solution to the problem instead of reaching for the same answer every time.
+                    </p>
+                </div>
             </div>
         </section>
-
     );
-};
+}
 
 
 export default About;
