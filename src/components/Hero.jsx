@@ -1,25 +1,32 @@
 import React from "react";
-import { FaDownload } from "react-icons/fa";
-import "../index.css";
+import { FaArrowRight, FaDownload } from "react-icons/fa";
 import HeroImg from "../assets/misbaudeen-khalid.png";
+import { RESUME_URL } from "../constants";
 
-function Hero () {
+function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero-content">
-        <h1 className="hero-title">Hi 👋,</h1>
+        <p className="hero-eyebrow">Software engineer · frontend / backend / AI</p>
+        <h1 className="hero-title">Khalid<br /><span>Misbaudeen.</span></h1>
         <p className="hero-description">
-        My name is <br /><span>Khalid Misbaudeen.</span> <br />A Software Engineer.
+          I build end-to-end digital products, combining thoughtful frontend experiences, dependable backend systems, and practical AI integrations for teams across industries.
         </p>
-        <button className="hero-button"><a href="https://drive.google.com/file/d/1RRj2dULOxz0E3P4JVHCl4phjrqrtc_am/view?usp=drivesdk" target="_blank">Download Resume <FaDownload /></a></button>
+        <div className="hero-actions">
+          <a className="hero-button" href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+            Download resume <FaDownload aria-hidden="true" />
+          </a>
+          <a className="hero-work-link" href="#projects">
+            Explore my work <FaArrowRight aria-hidden="true" />
+          </a>
+        </div>
       </div>
 
       <div className="hero-image">
-        <img src={HeroImg} alt="" />
+        <img src={HeroImg} alt="Khalid Misbaudeen in a dark suit" />
       </div>
     </section>
   );
 }
-
 
 export default Hero;

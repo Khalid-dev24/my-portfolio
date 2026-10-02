@@ -1,6 +1,4 @@
 import React from "react";
-import "../index.css";
-import "../responsiveness.css";
 import Imomotimi from "../assets/imomotimi.png";
 import Bigfix from "../assets/bigfix.png";
 import EnterpriseOne from "../assets/enterpriseone.png";
@@ -10,42 +8,37 @@ import Staffing from "../assets/25thandstaffing.png"
 const projectData = [
   {
     title: "25th & Staffing Website",
-    description: "Developed the 25th and Staffing website using React, creating a modern, responsive design with reusable components for a professional and seamless user experience across all devices.",
-    techStack: "React, CSS, Tailwind CSS, JavaScript, Typescript",
+    description: "A responsive digital presence for a staffing firm, built with reusable React components and clear service-focused pages.",
+    techStack: "React, CSS, Tailwind CSS, JavaScript, TypeScript",
     liveLink: "https://25thandstaffing.com", 
-    codeLink: "#", 
     image: Staffing, 
   },
   {
     title: "EnterpriseOne Website",
-    description: "Developed a modern business website for Enterprise One with React. Implemented reusable components, responsive layout, and smooth scrolling to present services clearly and professionally across all devices.",
+    description: "A polished corporate website that organizes Enterprise One's services into a clear, responsive experience.",
     techStack: "React, HTML, CSS, JavaScript",
     liveLink: "https://enterpriseone.com.ng", 
-    codeLink: "#", 
     image: EnterpriseOne, 
   },
   {
     title: "Bigfix Website",
-    description: "Built a responsive website for BigFix Integrated Technologies using React. Focused on clean UI components, smooth navigation, and organized sections to showcase IT services. Ensured mobile compatibility and dynamic content rendering.",
-    techStack: "React, HTML, CSS, JavaScript,",
+    description: "A responsive company website that brings BigFix Integrated Technologies' services and business information together.",
+    techStack: "React, HTML, CSS, JavaScript",
     liveLink: "https://bigfixtech.com",
-    codeLink: "#",
     image: Bigfix,
   },
   {
     title: "FastraSuite Website",
-    description: "FastraSuite is a sleek, responsive website I developed to showcase an enterprise management system. Built with React and VanillaCSS, it highlights key features, user roles, and platform benefits in a clean, modern layout.",
-    techStack: "React, HTML, CSS, JavaScript,",
+    description: "A product-focused website introducing FastraSuite's enterprise management platform, key features, and user roles.",
+    techStack: "React, HTML, CSS, JavaScript",
     liveLink: "https://fastrasuite.com",
-    codeLink: "#",
     image: FastraSuite,
   },
   {
     title: "Imomotimi Dancing Competition Website",
-    description: "Developed a responsive one-page website for Imomotimi Dancing Competition with a clean layout, smooth scrolling, and structured sections like Countdown, Location, and Contact. Designed for clarity, mobile compatibility, and ease of navigation.",
+    description: "A one-page event experience that brings the competition countdown, venue, and essential visitor details together.",
     techStack: "HTML, CSS, JavaScript",
     liveLink: "https://imomotimi-dancing-competition.netlify.app/",
-    codeLink: "#",
     image: Imomotimi,
   },
   
@@ -53,25 +46,30 @@ const projectData = [
 
 const Projects = () => {
   return (
-    <section className="projects-page">
-      <div className="projects-section" id="projects">
+    <section className="projects-page" id="projects">
+      <div className="projects-section">
         {/* Header and Description */}
-        <div className="projects-header">
+        <div className="projects-header" data-reveal>
           <h2>My Projects</h2>
           <p>
-            Here are some of the projects I have worked on (ones I am allowed to showcase).
+            A selection of web experiences I have built for businesses, products, and events.
           </p>
         </div>
       </div> 
-      <div className="projects-grid" id="projects">
+      <div className="projects-grid">
 
         {projectData.map((project, index) => (
-          <div className="project-card" key={index}>
-            <div
+          <article
+            className="project-card"
+            data-reveal
+            key={project.title}
+            style={{ "--reveal-delay": `${index * 90}ms` }}
+          >
+            <img
               className="project-image"
-              style={{
-                backgroundImage: `url(${project.image})`,
-              }}
+              src={project.image}
+              alt={`${project.title} website preview`}
+              loading="lazy"
             />
             <div className="project-content">
               <h3>{project.title}</h3>
@@ -83,22 +81,15 @@ const Projects = () => {
                 <a
                   href={project.liveLink}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="btn"
+                  aria-label={`Visit ${project.title}`}
                 >
                   Live Preview
                 </a>
-                <a
-                  href={project.codeLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-secondary"
-                >
-                  View Code
-                </a>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
